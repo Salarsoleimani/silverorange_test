@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2503ADD22B53C26600C860A1 /* MarkdownKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2503ADD12B53C26600C860A1 /* MarkdownKit */; };
+		2503ADE02B53C2CD00C860A1 /* VideoNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503ADDF2B53C2CD00C860A1 /* VideoNetworkModel.swift */; };
+		2503ADE22B53C2CD00C860A1 /* APIServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503ADE12B53C2CD00C860A1 /* APIServiceError.swift */; };
+		2503ADE42B53C2CD00C860A1 /* SilverOrangeErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503ADE32B53C2CD00C860A1 /* SilverOrangeErrorResponse.swift */; };
+		2503ADE62B53C2CD00C860A1 /* AuthorNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503ADE52B53C2CD00C860A1 /* AuthorNetworkModel.swift */; };
 		3AF67A5C25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF67A5B25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift */; };
 		3AF67A5E25A64DBD00D360A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF67A5D25A64DBD00D360A7 /* ContentView.swift */; };
 		3AF67A6025A64DBF00D360A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AF67A5F25A64DBF00D360A7 /* Assets.xcassets */; };
@@ -33,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2503ADDF2B53C2CD00C860A1 /* VideoNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoNetworkModel.swift; sourceTree = "<group>"; };
+		2503ADE12B53C2CD00C860A1 /* APIServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceError.swift; sourceTree = "<group>"; };
+		2503ADE32B53C2CD00C860A1 /* SilverOrangeErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SilverOrangeErrorResponse.swift; sourceTree = "<group>"; };
+		2503ADE52B53C2CD00C860A1 /* AuthorNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorNetworkModel.swift; sourceTree = "<group>"; };
 		3AF67A5825A64DBD00D360A7 /* VideoPlayerSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayerSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AF67A5B25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerSwiftUIApp.swift; sourceTree = "<group>"; };
 		3AF67A5D25A64DBD00D360A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2503ADD22B53C26600C860A1 /* MarkdownKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +82,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2503ADD82B53C2B500C860A1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2503ADDC2B53C2CD00C860A1 /* Helpers */,
+				2503ADD92B53C2BA00C860A1 /* Models */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		2503ADD92B53C2BA00C860A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2503ADDF2B53C2CD00C860A1 /* VideoNetworkModel.swift */,
+				2503ADE52B53C2CD00C860A1 /* AuthorNetworkModel.swift */,
+				2503ADE12B53C2CD00C860A1 /* APIServiceError.swift */,
+				2503ADE32B53C2CD00C860A1 /* SilverOrangeErrorResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2503ADDC2B53C2CD00C860A1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		3AF67A4F25A64DBD00D360A7 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +132,7 @@
 		3AF67A5A25A64DBD00D360A7 /* VideoPlayerSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				2503ADD82B53C2B500C860A1 /* Network */,
 				3AF67A5B25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift */,
 				3AF67A5D25A64DBD00D360A7 /* ContentView.swift */,
 				3AF67A5F25A64DBF00D360A7 /* Assets.xcassets */,
@@ -146,6 +184,9 @@
 			dependencies = (
 			);
 			name = VideoPlayerSwiftUI;
+			packageProductDependencies = (
+				2503ADD12B53C26600C860A1 /* MarkdownKit */,
+			);
 			productName = VideoPlayerSwiftUI;
 			productReference = 3AF67A5825A64DBD00D360A7 /* VideoPlayerSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +258,9 @@
 				Base,
 			);
 			mainGroup = 3AF67A4F25A64DBD00D360A7;
+			packageReferences = (
+				2503ADD02B53C26500C860A1 /* XCRemoteSwiftPackageReference "MarkdownKit" */,
+			);
 			productRefGroup = 3AF67A5925A64DBD00D360A7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,7 +304,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AF67A5E25A64DBD00D360A7 /* ContentView.swift in Sources */,
+				2503ADE02B53C2CD00C860A1 /* VideoNetworkModel.swift in Sources */,
+				2503ADE42B53C2CD00C860A1 /* SilverOrangeErrorResponse.swift in Sources */,
 				3AF67A5C25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift in Sources */,
+				2503ADE22B53C2CD00C860A1 /* APIServiceError.swift in Sources */,
+				2503ADE62B53C2CD00C860A1 /* AuthorNetworkModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +622,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2503ADD02B53C26500C860A1 /* XCRemoteSwiftPackageReference "MarkdownKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bmoliveira/MarkdownKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2503ADD12B53C26600C860A1 /* MarkdownKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2503ADD02B53C26500C860A1 /* XCRemoteSwiftPackageReference "MarkdownKit" */;
+			productName = MarkdownKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3AF67A5025A64DBD00D360A7 /* Project object */;
 }
