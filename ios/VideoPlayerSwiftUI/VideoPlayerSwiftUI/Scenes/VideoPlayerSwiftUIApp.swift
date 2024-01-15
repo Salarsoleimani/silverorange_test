@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct VideoPlayerSwiftUIApp: App {
+    
+    @ObservedObject var apiService = APIService()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
+                .environmentObject(apiService)
         }
+
     }
 }
+

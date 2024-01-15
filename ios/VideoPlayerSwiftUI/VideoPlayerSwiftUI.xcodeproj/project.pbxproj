@@ -17,8 +17,10 @@
 		2503ADEC2B54D0E700C860A1 /* NetworkURLFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503ADEB2B54D0E700C860A1 /* NetworkURLFactory.swift */; };
 		2503ADEE2B54D1ED00C860A1 /* RestMethodsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503ADED2B54D1ED00C860A1 /* RestMethodsEnum.swift */; };
 		2503ADF02B54D20B00C860A1 /* HeaderContentTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503ADEF2B54D20B00C860A1 /* HeaderContentTypeEnum.swift */; };
+		2503ADF22B54D3CE00C860A1 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503ADF12B54D3CE00C860A1 /* APIService.swift */; };
+		2503ADF52B54DA2F00C860A1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503ADF42B54DA2F00C860A1 /* MainViewModel.swift */; };
 		3AF67A5C25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF67A5B25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift */; };
-		3AF67A5E25A64DBD00D360A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF67A5D25A64DBD00D360A7 /* ContentView.swift */; };
+		3AF67A5E25A64DBD00D360A7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF67A5D25A64DBD00D360A7 /* MainView.swift */; };
 		3AF67A6025A64DBF00D360A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AF67A5F25A64DBF00D360A7 /* Assets.xcassets */; };
 		3AF67A6325A64DBF00D360A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AF67A6225A64DBF00D360A7 /* Preview Assets.xcassets */; };
 		3AF67A6E25A64DBF00D360A7 /* VideoPlayerSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF67A6D25A64DBF00D360A7 /* VideoPlayerSwiftUITests.swift */; };
@@ -52,9 +54,11 @@
 		2503ADEB2B54D0E700C860A1 /* NetworkURLFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkURLFactory.swift; sourceTree = "<group>"; };
 		2503ADED2B54D1ED00C860A1 /* RestMethodsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestMethodsEnum.swift; sourceTree = "<group>"; };
 		2503ADEF2B54D20B00C860A1 /* HeaderContentTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderContentTypeEnum.swift; sourceTree = "<group>"; };
+		2503ADF12B54D3CE00C860A1 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		2503ADF42B54DA2F00C860A1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		3AF67A5825A64DBD00D360A7 /* VideoPlayerSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayerSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AF67A5B25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerSwiftUIApp.swift; sourceTree = "<group>"; };
-		3AF67A5D25A64DBD00D360A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3AF67A5D25A64DBD00D360A7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		3AF67A5F25A64DBF00D360A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AF67A6225A64DBF00D360A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3AF67A6425A64DBF00D360A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 				2503ADD92B53C2BA00C860A1 /* Models */,
 				2503ADE92B54D0A700C860A1 /* NetworkManager.swift */,
 				2503ADEB2B54D0E700C860A1 /* NetworkURLFactory.swift */,
+				2503ADF12B54D3CE00C860A1 /* APIService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -124,6 +129,16 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		2503ADF32B54D9F500C860A1 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				3AF67A5B25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift */,
+				3AF67A5D25A64DBD00D360A7 /* MainView.swift */,
+				2503ADF42B54DA2F00C860A1 /* MainViewModel.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		3AF67A4F25A64DBD00D360A7 = {
 			isa = PBXGroup;
 			children = (
@@ -147,9 +162,8 @@
 		3AF67A5A25A64DBD00D360A7 /* VideoPlayerSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				2503ADF32B54D9F500C860A1 /* Scenes */,
 				2503ADD82B53C2B500C860A1 /* Network */,
-				3AF67A5B25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift */,
-				3AF67A5D25A64DBD00D360A7 /* ContentView.swift */,
 				3AF67A5F25A64DBF00D360A7 /* Assets.xcassets */,
 				3AF67A6425A64DBF00D360A7 /* Info.plist */,
 				3AF67A6125A64DBF00D360A7 /* Preview Content */,
@@ -248,8 +262,9 @@
 		3AF67A5025A64DBD00D360A7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1210;
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					3AF67A5725A64DBD00D360A7 = {
 						CreatedOnToolsVersion = 12.1;
@@ -318,16 +333,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AF67A5E25A64DBD00D360A7 /* ContentView.swift in Sources */,
+				3AF67A5E25A64DBD00D360A7 /* MainView.swift in Sources */,
 				2503ADEC2B54D0E700C860A1 /* NetworkURLFactory.swift in Sources */,
 				2503ADE02B53C2CD00C860A1 /* VideoNetworkModel.swift in Sources */,
 				2503ADE42B53C2CD00C860A1 /* SilverOrangeErrorResponse.swift in Sources */,
 				2503ADEE2B54D1ED00C860A1 /* RestMethodsEnum.swift in Sources */,
+				2503ADF52B54DA2F00C860A1 /* MainViewModel.swift in Sources */,
 				3AF67A5C25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift in Sources */,
 				2503ADEA2B54D0A700C860A1 /* NetworkManager.swift in Sources */,
 				2503ADF02B54D20B00C860A1 /* HeaderContentTypeEnum.swift in Sources */,
 				2503ADE22B53C2CD00C860A1 /* APIServiceError.swift in Sources */,
 				2503ADE82B53C2CD00C860A1 /* SilverOrangeDecoder.swift in Sources */,
+				2503ADF22B54D3CE00C860A1 /* APIService.swift in Sources */,
 				2503ADE62B53C2CD00C860A1 /* AuthorNetworkModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +418,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -462,6 +480,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

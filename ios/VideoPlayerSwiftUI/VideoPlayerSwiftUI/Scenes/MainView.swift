@@ -7,13 +7,18 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainView: View {
+    @EnvironmentObject var networkManager: APIService
+
     var body: some View {
         Text("Hello, world!")
             .padding()
+            .onAppear {
+                
+            }
     }
 }
 
 #Preview {
-    ContentView()
+    MainView()
 }
