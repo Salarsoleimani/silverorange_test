@@ -12,7 +12,6 @@ public struct VideoNetworkModel: Codable {
     public let title: String
     public let hlsURL: String
     public let fullURL: String
-    public let hlsURL: String
     public let description: String
     public let publishedAt: Date
     public let author: AuthorNetworkModel

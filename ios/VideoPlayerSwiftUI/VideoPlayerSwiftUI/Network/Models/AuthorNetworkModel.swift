@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct AuthorNetworkModel {
+public struct AuthorNetworkModel: Codable {
     public let name: String
     public let id: String
 }

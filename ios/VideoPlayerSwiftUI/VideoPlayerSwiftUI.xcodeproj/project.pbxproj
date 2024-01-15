@@ -12,6 +12,11 @@
 		2503ADE22B53C2CD00C860A1 /* APIServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503ADE12B53C2CD00C860A1 /* APIServiceError.swift */; };
 		2503ADE42B53C2CD00C860A1 /* SilverOrangeErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503ADE32B53C2CD00C860A1 /* SilverOrangeErrorResponse.swift */; };
 		2503ADE62B53C2CD00C860A1 /* AuthorNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503ADE52B53C2CD00C860A1 /* AuthorNetworkModel.swift */; };
+		2503ADE82B53C2CD00C860A1 /* SilverOrangeDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503ADE72B53C2CD00C860A1 /* SilverOrangeDecoder.swift */; };
+		2503ADEA2B54D0A700C860A1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503ADE92B54D0A700C860A1 /* NetworkManager.swift */; };
+		2503ADEC2B54D0E700C860A1 /* NetworkURLFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503ADEB2B54D0E700C860A1 /* NetworkURLFactory.swift */; };
+		2503ADEE2B54D1ED00C860A1 /* RestMethodsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503ADED2B54D1ED00C860A1 /* RestMethodsEnum.swift */; };
+		2503ADF02B54D20B00C860A1 /* HeaderContentTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503ADEF2B54D20B00C860A1 /* HeaderContentTypeEnum.swift */; };
 		3AF67A5C25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF67A5B25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift */; };
 		3AF67A5E25A64DBD00D360A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF67A5D25A64DBD00D360A7 /* ContentView.swift */; };
 		3AF67A6025A64DBF00D360A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AF67A5F25A64DBF00D360A7 /* Assets.xcassets */; };
@@ -42,6 +47,11 @@
 		2503ADE12B53C2CD00C860A1 /* APIServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceError.swift; sourceTree = "<group>"; };
 		2503ADE32B53C2CD00C860A1 /* SilverOrangeErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SilverOrangeErrorResponse.swift; sourceTree = "<group>"; };
 		2503ADE52B53C2CD00C860A1 /* AuthorNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorNetworkModel.swift; sourceTree = "<group>"; };
+		2503ADE72B53C2CD00C860A1 /* SilverOrangeDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SilverOrangeDecoder.swift; sourceTree = "<group>"; };
+		2503ADE92B54D0A700C860A1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		2503ADEB2B54D0E700C860A1 /* NetworkURLFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkURLFactory.swift; sourceTree = "<group>"; };
+		2503ADED2B54D1ED00C860A1 /* RestMethodsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestMethodsEnum.swift; sourceTree = "<group>"; };
+		2503ADEF2B54D20B00C860A1 /* HeaderContentTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderContentTypeEnum.swift; sourceTree = "<group>"; };
 		3AF67A5825A64DBD00D360A7 /* VideoPlayerSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayerSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AF67A5B25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerSwiftUIApp.swift; sourceTree = "<group>"; };
 		3AF67A5D25A64DBD00D360A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +97,8 @@
 			children = (
 				2503ADDC2B53C2CD00C860A1 /* Helpers */,
 				2503ADD92B53C2BA00C860A1 /* Models */,
+				2503ADE92B54D0A700C860A1 /* NetworkManager.swift */,
+				2503ADEB2B54D0E700C860A1 /* NetworkURLFactory.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -105,6 +117,9 @@
 		2503ADDC2B53C2CD00C860A1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				2503ADE72B53C2CD00C860A1 /* SilverOrangeDecoder.swift */,
+				2503ADED2B54D1ED00C860A1 /* RestMethodsEnum.swift */,
+				2503ADEF2B54D20B00C860A1 /* HeaderContentTypeEnum.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -304,10 +319,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AF67A5E25A64DBD00D360A7 /* ContentView.swift in Sources */,
+				2503ADEC2B54D0E700C860A1 /* NetworkURLFactory.swift in Sources */,
 				2503ADE02B53C2CD00C860A1 /* VideoNetworkModel.swift in Sources */,
 				2503ADE42B53C2CD00C860A1 /* SilverOrangeErrorResponse.swift in Sources */,
+				2503ADEE2B54D1ED00C860A1 /* RestMethodsEnum.swift in Sources */,
 				3AF67A5C25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift in Sources */,
+				2503ADEA2B54D0A700C860A1 /* NetworkManager.swift in Sources */,
+				2503ADF02B54D20B00C860A1 /* HeaderContentTypeEnum.swift in Sources */,
 				2503ADE22B53C2CD00C860A1 /* APIServiceError.swift in Sources */,
+				2503ADE82B53C2CD00C860A1 /* SilverOrangeDecoder.swift in Sources */,
 				2503ADE62B53C2CD00C860A1 /* AuthorNetworkModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
