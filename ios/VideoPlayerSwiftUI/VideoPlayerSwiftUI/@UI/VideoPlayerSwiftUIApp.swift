@@ -9,13 +9,14 @@ import SwiftUI
 
 @main
 struct VideoPlayerSwiftUIApp: App {
-    
-    @ObservedObject var apiService = APIService()
-    
+        
     var body: some Scene {
         WindowGroup {
-            MainView()
-                .environmentObject(apiService)
+            NavigationView {
+                MainView()
+                    .navigationTitle("Video Player")
+                    .navigationBarTitleDisplayMode(.inline)
+            }
         }
 
     }
